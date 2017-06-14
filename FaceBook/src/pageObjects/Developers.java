@@ -10,7 +10,7 @@ import org.openqa.selenium.support.How;
 
 import utilities.utils;
 
-public class Developers
+public class Developers  extends utils
 
 {
 	final WebDriver driver;

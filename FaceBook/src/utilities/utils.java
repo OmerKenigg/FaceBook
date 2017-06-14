@@ -35,17 +35,16 @@ public class utils
 	public static ExtentTest test ;
 	private static String sPathFile = "projConfig.xml" ;
 	
-	// This Function Initiate a Test for it's Logs and reports
+	  // This Function Initiate a Test for it's Logs and reports
     // <param name="sTestName">Test Name</param>
     // <param name="sTestDescription">test Description</param>
-	
-	public void initTest ( String sTestName, String sTestdescription ) throws ParserConfigurationException, SAXException, IOException 
-	{
-		location = getData ("ReportFilePath") + "Execution_" + timeStamp + "\\";
-		File dir = new File (location);
-		dir.mkdirs();
-		test = extent.startTest(sTestName, sTestdescription );		
-	}
+    public void initTest(String sTestName, String sTestDescription) throws ParserConfigurationException, SAXException, IOException
+    {
+        location = getData("ReportFilePath") + "Execution_" + timeStamp + "\\";
+        File dir = new File(location);
+        dir.mkdir();
+        test = extent.startTest(sTestName, sTestDescription);       
+    }
 
 	
 	 // This Function Reads data from XML Configuration File
