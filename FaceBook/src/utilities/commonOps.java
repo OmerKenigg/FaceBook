@@ -32,28 +32,6 @@ public class commonOps extends utils
         
     }
     
-    // This Function Verify if Element is Not Displayed on Page (Verification made By DOM Recognition)
-    // <param name="element">DOM Element</param>
-    public void verifyElementNotDisplay1(WebElement element) throws ParserConfigurationException, SAXException, IOException
-    {
-        try
-        {
-        	if (!element.isDisplayed())
-        		test.log(LogStatus.PASS, "DOM Verification Passed, Element Not Displayed: " + element);
-        	else
-        	{
-        		test.log(LogStatus.FAIL, "DOM Verification Failed, Element Displayed: " + element + test.addScreenCapture(extentReportManager.CaptureScreen(timeStamp)));
-        		fail("DOM Verification Failed, Element Displayed");
-        	}	
-            
-        }
-        catch (Exception exp)
-        {
-            test.log(LogStatus.FAIL, "DOM Verification Failed, Element NOT Exists, Error Message: " + exp.getMessage() + test.addScreenCapture(extentReportManager.CaptureScreen(timeStamp)));
-            System.out.println("Element not Exists in Page : " + exp.getMessage());
-            fail("Problem with Verifying Element, See Report for more Details");
-        }
-    }
     // This Function Verify if Element Displayed on Page (Verification made By DOM Recognition)
     // <param name="element">DOM Element</param>
     public void verifyElementDisplay(WebElement element) throws ParserConfigurationException, SAXException, IOException
